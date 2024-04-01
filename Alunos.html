@@ -3,100 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alunos</title>
+    <title>Aluno</title>
 </head>
 <body>
     <div class="corpo">
+
         <nav>
             <div class="menu-sid">
-                <i class="bi bi-list sidebar-toggle"></i>
+                <i class="bi bi-lidt sidebar-toggle"></i>
             </div>
             <div class="div-logo-name">
                 <span class="logo-name">Biblioteca</span>
             </div>
+
             <div class="menu-items">
                 <ul class="nav-links">
                     <li><a href="dahsboard.html">
                         <i class="bi bi-house"></i>
-                        <samp class="link-name">Dahsboard</samp>
+                        <span class="link-name">Dahsboard</span>
                     </a></li>
-                    <li><a herf="alunos.html">
+                    <li><a href="Alunos.html">
                         <i class="bi bi-person-vcard"></i>
-                        <span class="link-name">alunos</span>
+                        <span class="link-name">Alunos</span>
                     </a></li>
-                    <li><a href="alunos.html">
-                        <i class="bi bi-person-vcard"></i>
-                        <span class="link-name">alunos</span>
+                    <li><a href="Fucionarios.html">
+                        <i class="'bi bi-person-vcard"></i>
+                        <span class="link-name">Funcionarios</span>
                     </a></li>
-                    <li><a href="fucionarios.html">
-                        <i class="bi bi-person-vcard"></i>
-                        <span class="link-name">fucionario</span>
-                    </a></li>
-                    <li><a href="editoras.html">
+                    <li><a href="Editoras.html">
                         <i class="bi bi-clipboard-data"></i>
-                        <span class="link-name">livros</span>
+                        <span class="link-name">Editoras</span>
                     </a></li>
-                    <li><a href="livroos.html">
+                    <li><a href="Livros.html">
                         <i class="bi bi-clipboard-data"></i>
-                        <span class="link-name">livros</span>
+                        <span class="link-name">Livros</span>
                     </a></li>
-                    <li><a href="emprestimos.html">
-                         <i class="bi bi-person-workspace"></i>
-                        <span class="link-name">emprestimos</span>
-                    </a></li>                
-                 </ul>
+                    <li><a href="Emprestimos.html">
+                        <i class="bi bi-person-workespace"></i>
+                        <span class="link-name">Emprestimos</span>
+                    </a></li>
+
+                </ul>
             </div>
         </nav>
-        <section class="deshboard">
+        <section class="dahsboard">
             <div class="top">
                 <i class="bi bi-list sidebar-toggle2"></i>
-                <div class="logp-name">
-                    <h1 class="seduc-logo">biblioteca escolar</h1>
+                <div class="logo-name">
+                    <H1 class="seduc-logo">Biblioteca Escolar</H1>
+                </div>
+                <div class="actioning">
+                    <div class="profile" onclick="menuTogggle();">
+                        <img src="img/avatar5.png" alt="">
+                    </div>
+                    <div class="menu">
+                        <h3>Messias</h3>
+                        <ul>
+                            <li>
+                                <span class="material-icons icons-size"><i class="bi bi-person"></i></span>
+                                <a href="#">Perfil</a>
+                            </li>
+                            <li>
+                                <span class="material-icons icons-size"><i class="bi bi-question-circle"></i></span>
+                                <a href="#">Ajuda</a>
+                            </li>
+                            <li>
+                                <span class="material-icons icons-size"><i class="bi bi-gear"></i></span>
+                                <a href="#">Configurações</a>
+                            </li>
+                            <li>
+                                <span class="material-icons icons-size"><i class="bi bi-box-arrow-right"></i></span>
+                                <a href="index.html">Saida</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="corpo-da-pag">
+                <div class="scroll">
+                    <div class="activity">
+                        <div class="overvlew">
+                            <div class="title">
+                                <i class="bi bi-person-rolodex"></i>
+                                <span class="text">Alunos</span>
+                            </div>
+                            <div class="seducSever" style="white-space: nowrap;">
+                            <li class="breadcrumb-item"><a
+                                style="text-decoration: none !important; color: black; font-size: 12px; margin-left: 2%;"
+                                href="dahsboard.html">Biblioteca Escolar</a></li>
+                            <li class="breadcrumb-item"><a
+                                style="text-decoration: none !important; color: black; font-size: 12px; margin-left: 2%;"
+                                href="Alunos.html">&nbsp> Alunos</a></li>
+                            </div>
+                        </div>
+                        <div id="lupa-grid">
+                            <button type="button" class="button blue mobile" id="cadastrarAlunos">Cadastrar Novo Alunos</button>
+                        </div>
+                    <br>
+
+                         <table id="tableAluno" class="records">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+          103                          <th>Matricula</th>
+                                    <th>Curso</th>
+                                    <th>Serie</th>
+                                    <th>Celular</th>
+                                    <th>E-mail</th>
+                                    <th>Ação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                         </table>
+                         <div class="modal" id="modal2">
+                            <div class="modal-content">
+                                <header class="modal-header">
+                                    <h2>Excluir Aluno</h2>
+                                    <span class="modal-close" id="modalClose2">&#10006;</span>
+                                </header>
+                                <div id="avisoDelete">
+
+                                </div>
+                                <footer class="modal-footer">
+                                    <button id="apagar" class="button red">Apagar</button>
+                                    <button id="cancelar2" class="button blue">Cancelar</button>
+
+                                </footer>
+                            </div>
+                         </div>
+                         <div class="modal" id="modal">
+                            <div class="modal-content">
+                                <header class="modal-header">
+                                    <h2>Novo Aluno</h2>
+                                    <span class="modal-close" id="modalClose">&#10006:</span>
+                                </header>
+                                <form id="form" class="modal-form">
+                                    <input type="text" id="nome" data-index="new" class="moda-fleld" placeholder="Nome do Aluno" required>
+                                    <input type="number" id="matricula" class="moda-fleld" placeholder="Matricula do Aluno" required>
+                                    <input type="text" id="telefone" class="moda-fleld" placeholder="Telefone do Aluno" required>
+                                    <input type="text" id="celular" class="moda-fleld" placeholder="Celular do Aluno" required>
+                                    <input type="email" id="email" class="moda-fleld" placeholder="E-mail do Aluno" required>
+                                    <input type="text" id="rua" class="moda-fleld" placeholder="Endereço do Aluno" required>
+                                    <input type="number" id="numero" data-index="new" class="moda-fleld" placeholder="Numero da Residencia" required>
+                                    <input type="text" id="complemento" class="moda-fleld" placeholder="Complemento Endereço" required>
+                                    <input type="text" id="cidade" class="moda-fleld" placeholder="Cidade do Aluno" required>
+                                    <input type="text" id="estado" class="moda-fleld" placeholder="Estado do Aluno" required>
+                                    <input type="text" id="curso" data-index="new" class="moda-fleld" placeholder="Curso do Aluno" required>
+                                    <input type="number" id="serie" class="moda-fleld" placeholder="Série do Aluno" required>
+                                </form>
+                                <footer class="modal-footer">
+                                    <button id="salvar" class="button green">Salvar</button>
+                                    <button id="Cancelar" class="button blue">Cancelar</button>
+                                </footer>
+                            </div>
+                         </div>
+
+
+                                                        
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    <div class="actioning">
-        <div class="profile" onclick="menutonggle();">
-            <img src="img/avatar5.png" alt="">
-        </div>
-        <div class="menu">
-            <h3>
-                antonio carlos
-            </h3>
-            <ul>
-                <li>
-                    <span class="material-incos-size"><i class="bi bi-person"></i></span>
-                    <a href="#">Perfil</a>
-                </li>
-                <li>
-                    <span class="material-incos-size"><i class= "bi bi-question-circle"></i></span>
-                    <a href="#"ajuda></a>
-                </li>
-                <li>
-                    <span class="material-incos icons-size"><i classs="bi bi-gear"></i></span>
-                    <a href="#">configuraçoes</a>
-                </li>
-                <li>
-                    <span class="material-incos icons-size"><i class="bi bi-box-arrow-right"></i></span>
-                    <a href="index.html">Saida</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-  </div>
-  <div class="corpo-da-pag">
-    <div class="scroll">
-        <div class="activity">
-            <div class="overview">
-        <div class="title">
-            <i class="bi bi-person-rolodex"></i>
-            <span class="text">aluno</span>
-        </div>
-        <div class="seducsever" style="white-space: nowrap;">
-            <li class="breadcrub-item"><a
-                style="text-decoration: name !important; color: black; font-size: 12px; margin-left: 2%;"
-                href="dahsboard.html">biblioteca escilar</a></li>
-                <li class="breadcrub-item"><a
-                    style="text-decoration: name !important; color: rgb(99, 99, 99); font-size: 12px; margin-left: 2%;"
-                    href="Alunos.html">&nbsp;>alunos</a></li>
-                    
 </body>
 </html>
